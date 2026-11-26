@@ -1,0 +1,709 @@
+2026/11/26 20:49:28 http2: server: error reading preface from client //./pipe/docker_engine: file has already been closed
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.49kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/emr-on-eks/spark/emr-spark-8.2.0@sha256:931a64f282e2e1455bbcce77a24ab9ae6bb37d033690cfff4f430c201db0d3b8
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM public.ecr.aws/emr-on-eks/spark/emr-spark-8.2.0@sha256:931a64f282e2e1455bbcce77a24ab9ae6bb37d033690cfff4f430c201db0d3b8
+#4 DONE 0.2s
+
+#5 [internal] load build context
+#5 transferring context: 3.38kB done
+#5 DONE 0.1s
+
+#6 [2/5] RUN dnf -y upgrade --releasever=latest  && dnf clean all && rm -rf /var/cache/dnf
+#6 9.080 Amazon Linux 2023 repository                     12 MB/s |  91 MB     00:07    
+#6 25.22 Last metadata expiration check: 0:00:21 ago on Thu Nov 26 13:49:32 2026.
+#6 26.60 Dependencies resolved.
+#6 26.67 ==========================================================================================
+#6 26.67  Package                            Arch    Version                     Repository    Size
+#6 26.67 ==========================================================================================
+#6 26.67 Upgrading:
+#6 26.67  alsa-lib                           x86_64  1.2.7.2-1.amzn2023.0.5      amazonlinux  503 k
+#6 26.67  amazon-linux-repo-cdn              noarch  2023.12.20261120-0.amzn2023 amazonlinux   12 k
+#6 26.67  curl-minimal                       x86_64  8.21.0-5.amzn2023.0.5       amazonlinux  194 k
+#6 26.67  device-mapper                      x86_64  1.02.185-1.amzn2023.0.6     amazonlinux  137 k
+#6 26.67  device-mapper-libs                 x86_64  1.02.185-1.amzn2023.0.6     amazonlinux  176 k
+#6 26.67  elfutils-default-yama-scope        noarch  0.188-3.amzn2023.0.4        amazonlinux  9.8 k
+#6 26.67  elfutils-libelf                    x86_64  0.188-3.amzn2023.0.4        amazonlinux  192 k
+#6 26.67  elfutils-libs                      x86_64  0.188-3.amzn2023.0.4        amazonlinux  251 k
+#6 26.67  glibc                              x86_64  2.34-231.amzn2023.0.6       amazonlinux  2.0 M
+#6 26.67  glibc-common                       x86_64  2.34-231.amzn2023.0.6       amazonlinux  295 k
+#6 26.67  glibc-minimal-langpack             x86_64  2.34-231.amzn2023.0.6       amazonlinux   21 k
+#6 26.67  java-17-amazon-corretto            x86_64  1:17.0.21.1.2-1.amzn2023.1  amazonlinux  220 k
+#6 26.67  java-17-amazon-corretto-headless   x86_64  1:17.0.21.1.2-1.amzn2023.1  amazonlinux   91 M
+#6 26.67  libX11                             x86_64  1.8.10-2.amzn2023.0.3       amazonlinux  655 k
+#6 26.67  libX11-common                      noarch  1.8.10-2.amzn2023.0.3       amazonlinux  144 k
+#6 26.67  libXi                              x86_64  1.8.4-1.amzn2023.0.1        amazonlinux   43 k
+#6 26.67  libarchive                         x86_64  3.7.4-2.amzn2023.0.5        amazonlinux  411 k
+#6 26.67  libcurl-minimal                    x86_64  8.21.0-5.amzn2023.0.5       amazonlinux  349 k
+#6 26.67  libgcc                             x86_64  14.2.1-7.amzn2023.0.3       amazonlinux  135 k
+#6 26.67  libgomp                            x86_64  14.2.1-7.amzn2023.0.3       amazonlinux  355 k
+#6 26.67  libstdc++                          x86_64  14.2.1-7.amzn2023.0.3       amazonlinux  873 k
+#6 26.67  nginx                              x86_64  1:1.30.7-1.amzn2023.0.1     amazonlinux   34 k
+#6 26.67  nginx-core                         x86_64  1:1.30.7-1.amzn2023.0.1     amazonlinux  713 k
+#6 26.67  nginx-filesystem                   noarch  1:1.30.7-1.amzn2023.0.1     amazonlinux   10 k
+#6 26.67  openssl                            x86_64  1:3.5.8-1.amzn2023.0.4      amazonlinux  1.4 M
+#6 26.67  openssl-fips-provider-latest       x86_64  1:3.5.8-1.amzn2023.0.4      amazonlinux  835 k
+#6 26.67  openssl-libs                       x86_64  1:3.5.8-1.amzn2023.0.4      amazonlinux  2.3 M
+#6 26.67  perl-URI                           noarch  5.18-1.amzn2023.0.2         amazonlinux  111 k
+#6 26.67  perl-podlators                     noarch  1:4.14-458.amzn2023.0.3     amazonlinux  112 k
+#6 26.67  python3-rpm                        x86_64  4.16.1.3-29.amzn2023.0.10   amazonlinux   64 k
+#6 26.67  python3-virtualenv                 noarch  20.4.0-3.amzn2023.0.6       amazonlinux  240 k
+#6 26.67  python3.13                         x86_64  3.13.18-1.amzn2023.0.1      amazonlinux   30 k
+#6 26.67  python3.13-libs                    x86_64  3.13.18-1.amzn2023.0.1      amazonlinux  9.4 M
+#6 26.67  rpm                                x86_64  4.16.1.3-29.amzn2023.0.10   amazonlinux  484 k
+#6 26.67  rpm-build-libs                     x86_64  4.16.1.3-29.amzn2023.0.10   amazonlinux   87 k
+#6 26.67  rpm-libs                           x86_64  4.16.1.3-29.amzn2023.0.10   amazonlinux  309 k
+#6 26.67  rpm-plugin-selinux                 x86_64  4.16.1.3-29.amzn2023.0.10   amazonlinux   15 k
+#6 26.67  rpm-sign-libs                      x86_64  4.16.1.3-29.amzn2023.0.10   amazonlinux   18 k
+#6 26.67  ruby3.2                            x86_64  3.2.8-184.amzn2023.0.7      amazonlinux   41 k
+#6 26.67  ruby3.2-default-gems               noarch  3.2.8-184.amzn2023.0.7      amazonlinux   33 k
+#6 26.67  ruby3.2-libs                       x86_64  3.2.8-184.amzn2023.0.7      amazonlinux  3.9 M
+#6 26.67  ruby3.2-rubygem-bigdecimal         x86_64  3.1.3-184.amzn2023.0.7      amazonlinux   67 k
+#6 26.67  ruby3.2-rubygem-bundler            noarch  2.4.19-184.amzn2023.0.7     amazonlinux  383 k
+#6 26.67  ruby3.2-rubygem-io-console         x86_64  0.6.0-184.amzn2023.0.7      amazonlinux   23 k
+#6 26.67  ruby3.2-rubygem-json               x86_64  2.6.3-184.amzn2023.0.7      amazonlinux   52 k
+#6 26.67  ruby3.2-rubygem-psych              x86_64  5.0.1-184.amzn2023.0.7      amazonlinux   50 k
+#6 26.67  ruby3.2-rubygem-rdoc               noarch  6.5.1.1-184.amzn2023.0.7    amazonlinux  459 k
+#6 26.67  ruby3.2-rubygems                   noarch  3.4.19-184.amzn2023.0.7     amazonlinux  258 k
+#6 26.67  ruby4.0-default-gems               noarch  4.0.10-41.amzn2023.0.1      amazonlinux   28 k
+#6 26.67  sqlite-libs                        x86_64  3.40.0-1.amzn2023.0.9       amazonlinux  660 k
+#6 26.67  system-release                     noarch  2023.12.20261120-0.amzn2023 amazonlinux   23 k
+#6 26.67  tzdata                             noarch  2026f-1.amzn2023.0.1        amazonlinux  430 k
+#6 26.67 Installing dependencies:
+#6 26.67  perl-Unicode-Normalize             x86_64  1.27-459.amzn2023.0.3       amazonlinux   91 k
+#6 26.67 
+#6 26.67 Transaction Summary
+#6 26.67 ==========================================================================================
+#6 26.67 Install   1 Package
+#6 26.67 Upgrade  52 Packages
+#6 26.67 
+#6 26.67 Total download size: 121 M
+#6 26.67 Downloading Packages:
+#6 28.73 (1/53): alsa-lib-1.2.7.2-1.amzn2023.0.5.x86_64. 5.4 MB/s | 503 kB     00:00    
+#6 28.79 (2/53): curl-minimal-8.21.0-5.amzn2023.0.5.x86_ 3.1 MB/s | 194 kB     00:00    
+#6 28.88 (3/53): amazon-linux-repo-cdn-2023.12.20261120- 592 kB/s |  12 kB     00:00    
+#6 29.07 (4/53): perl-Unicode-Normalize-1.27-459.amzn202 2.0 MB/s |  91 kB     00:00    
+#6 29.08 (5/53): elfutils-default-yama-scope-0.188-3.amz 677 kB/s | 9.8 kB     00:00    
+#6 29.83 (6/53): device-mapper-libs-1.02.185-1.amzn2023. 186 kB/s | 176 kB     00:00    
+#6 29.84 (7/53): device-mapper-1.02.185-1.amzn2023.0.6.x 131 kB/s | 137 kB     00:01    
+#6 32.86 (8/53): elfutils-libelf-0.188-3.amzn2023.0.4.x8  51 kB/s | 192 kB     00:03    
+#6 32.89 (9/53): elfutils-libs-0.188-3.amzn2023.0.4.x86_  82 kB/s | 251 kB     00:03    
+#6 32.93 (10/53): glibc-2.34-231.amzn2023.0.6.x86_64.rpm 652 kB/s | 2.0 MB     00:03    
+#6 32.94 (11/53): glibc-common-2.34-231.amzn2023.0.6.x86 3.5 MB/s | 295 kB     00:00    
+#6 32.95 (12/53): glibc-minimal-langpack-2.34-231.amzn20 372 kB/s |  21 kB     00:00    
+#6 32.98 (13/53): libX11-1.8.10-2.amzn2023.0.3.x86_64.rp  17 MB/s | 655 kB     00:00    
+#6 33.02 (14/53): java-17-amazon-corretto-17.0.21.1.2-1. 2.6 MB/s | 220 kB     00:00    
+#6 33.12 (15/53): libX11-common-1.8.10-2.amzn2023.0.3.no 1.1 MB/s | 144 kB     00:00    
+#6 33.16 (16/53): libXi-1.8.4-1.amzn2023.0.1.x86_64.rpm  299 kB/s |  43 kB     00:00    
+#6 33.32 (17/53): libarchive-3.7.4-2.amzn2023.0.5.x86_64 2.0 MB/s | 411 kB     00:00    
+#6 33.39 (18/53): libcurl-minimal-8.21.0-5.amzn2023.0.5. 1.5 MB/s | 349 kB     00:00    
+#6 33.56 (19/53): libgcc-14.2.1-7.amzn2023.0.3.x86_64.rp 553 kB/s | 135 kB     00:00    
+#6 33.74 (20/53): libgomp-14.2.1-7.amzn2023.0.3.x86_64.r 1.0 MB/s | 355 kB     00:00    
+#6 33.84 (21/53): libstdc++-14.2.1-7.amzn2023.0.3.x86_64 3.1 MB/s | 873 kB     00:00    
+#6 34.04 (22/53): nginx-1.30.7-1.amzn2023.0.1.x86_64.rpm 114 kB/s |  34 kB     00:00    
+#6 34.36 (23/53): nginx-core-1.30.7-1.amzn2023.0.1.x86_6 1.3 MB/s | 713 kB     00:00    
+#6 34.53 (24/53): nginx-filesystem-1.30.7-1.amzn2023.0.1  20 kB/s |  10 kB     00:00    
+#6 34.68 (25/53): openssl-3.5.8-1.amzn2023.0.4.x86_64.rp 4.6 MB/s | 1.4 MB     00:00    
+#6 34.83 (26/53): openssl-fips-provider-latest-3.5.8-1.a 2.8 MB/s | 835 kB     00:00    
+#6 36.94 (27/53): openssl-libs-3.5.8-1.amzn2023.0.4.x86_ 1.0 MB/s | 2.3 MB     00:02    
+#6 37.71 (28/53): perl-URI-5.18-1.amzn2023.0.2.noarch.rp  39 kB/s | 111 kB     00:02    
+#6 37.89 (29/53): perl-podlators-4.14-458.amzn2023.0.3.n 118 kB/s | 112 kB     00:00    
+#6 38.59 (30/53): java-17-amazon-corretto-headless-17.0.  16 MB/s |  91 MB     00:05    
+#6 38.60 (31/53): python3-rpm-4.16.1.3-29.amzn2023.0.10.  72 kB/s |  64 kB     00:00    
+#6 38.61 (32/53): python3-virtualenv-20.4.0-3.amzn2023.0 336 kB/s | 240 kB     00:00    
+#6 38.65 (33/53): python3.13-3.13.18-1.amzn2023.0.1.x86_ 515 kB/s |  30 kB     00:00    
+#6 39.61 (34/53): rpm-build-libs-4.16.1.3-29.amzn2023.0.  91 kB/s |  87 kB     00:00    
+#6 39.65 (35/53): rpm-4.16.1.3-29.amzn2023.0.10.x86_64.r 466 kB/s | 484 kB     00:01    
+#6 40.08 (36/53): python3.13-libs-3.13.18-1.amzn2023.0.1 6.3 MB/s | 9.4 MB     00:01    
+#6 40.09 (37/53): rpm-plugin-selinux-4.16.1.3-29.amzn202  34 kB/s |  15 kB     00:00    
+#6 40.09 (38/53): rpm-libs-4.16.1.3-29.amzn2023.0.10.x86 646 kB/s | 309 kB     00:00    
+#6 40.10 (39/53): rpm-sign-libs-4.16.1.3-29.amzn2023.0.1 1.1 MB/s |  18 kB     00:00    
+#6 40.68 (40/53): ruby3.2-default-gems-3.2.8-184.amzn202  57 kB/s |  33 kB     00:00    
+#6 40.69 (41/53): ruby3.2-3.2.8-184.amzn2023.0.7.x86_64.  68 kB/s |  41 kB     00:00    
+#6 40.85 (42/53): ruby3.2-libs-3.2.8-184.amzn2023.0.7.x8 5.2 MB/s | 3.9 MB     00:00    
+#6 41.29 (43/53): ruby3.2-rubygem-bigdecimal-3.1.3-184.a 110 kB/s |  67 kB     00:00    
+#6 41.46 (44/53): ruby3.2-rubygem-bundler-2.4.19-184.amz 497 kB/s | 383 kB     00:00    
+#6 41.47 (45/53): ruby3.2-rubygem-io-console-0.6.0-184.a  38 kB/s |  23 kB     00:00    
+#6 41.88 (46/53): ruby3.2-rubygem-json-2.6.3-184.amzn202  87 kB/s |  52 kB     00:00    
+#6 42.05 (47/53): ruby3.2-rubygem-psych-5.0.1-184.amzn20  84 kB/s |  50 kB     00:00    
+#6 42.30 (48/53): ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2 551 kB/s | 459 kB     00:00    
+#6 43.08 (49/53): sqlite-libs-3.40.0-1.amzn2023.0.9.x86_ 841 kB/s | 660 kB     00:00    
+#6 43.14 (50/53): system-release-2023.12.20261120-0.amzn 433 kB/s |  23 kB     00:00    
+#6 43.20 (51/53): tzdata-2026f-1.amzn2023.0.1.noarch.rpm 6.5 MB/s | 430 kB     00:00    
+#6 43.59 (52/53): ruby4.0-default-gems-4.0.10-41.amzn202  18 kB/s |  28 kB     00:01    
+#6 43.61 (53/53): ruby3.2-rubygems-3.4.19-184.amzn2023.0 150 kB/s | 258 kB     00:01    
+#6 43.61 --------------------------------------------------------------------------------
+#6 43.61 Total                                           7.1 MB/s | 121 MB     00:16     
+#6 44.98 Running transaction check
+#6 45.16 Transaction check succeeded.
+#6 45.16 Running transaction test
+#6 46.14 Transaction test succeeded.
+#6 46.14 Running transaction
+#6 48.56   Preparing        :                                                        1/1 
+#6 48.73   Upgrading        : tzdata-2026f-1.amzn2023.0.1.noarch                   1/105 
+#6 48.77   Upgrading        : glibc-common-2.34-231.amzn2023.0.6.x86_64            2/105 
+#6 48.78   Upgrading        : glibc-minimal-langpack-2.34-231.amzn2023.0.6.x86     3/105 
+#6 48.79   Upgrading        : libgcc-14.2.1-7.amzn2023.0.3.x86_64                  4/105 
+#6 48.79   Running scriptlet: libgcc-14.2.1-7.amzn2023.0.3.x86_64                  4/105 
+#6 48.81   Running scriptlet: glibc-2.34-231.amzn2023.0.6.x86_64                   5/105 
+#6 48.88   Upgrading        : glibc-2.34-231.amzn2023.0.6.x86_64                   5/105 
+#6 48.89   Running scriptlet: glibc-2.34-231.amzn2023.0.6.x86_64                   5/105 
+#6 48.93   Upgrading        : sqlite-libs-3.40.0-1.amzn2023.0.9.x86_64             6/105 
+#6 48.95   Upgrading        : alsa-lib-1.2.7.2-1.amzn2023.0.5.x86_64               7/105 
+#6 48.97   Upgrading        : elfutils-libelf-0.188-3.amzn2023.0.4.x86_64          8/105 
+#6 48.98   Running scriptlet: nginx-filesystem-1:1.30.7-1.amzn2023.0.1.noarch      9/105 
+#6 48.99   Upgrading        : nginx-filesystem-1:1.30.7-1.amzn2023.0.1.noarch      9/105 
+#6 50.33   Upgrading        : java-17-amazon-corretto-headless-1:17.0.21.1.2-1    10/105 
+#6 50.34   Running scriptlet: java-17-amazon-corretto-headless-1:17.0.21.1.2-1    10/105 
+#6 50.35   Installing       : perl-Unicode-Normalize-1.27-459.amzn2023.0.3.x86    11/105 
+#6 50.36   Upgrading        : device-mapper-libs-1.02.185-1.amzn2023.0.6.x86_6    12/105 
+#6 50.38   Upgrading        : device-mapper-1.02.185-1.amzn2023.0.6.x86_64        13/105 
+#6 50.40   Upgrading        : libgomp-14.2.1-7.amzn2023.0.3.x86_64                14/105 
+#6 50.43   Upgrading        : openssl-fips-provider-latest-1:3.5.8-1.amzn2023.    15/105 
+#6 50.49   Upgrading        : openssl-libs-1:3.5.8-1.amzn2023.0.4.x86_64          16/105 
+#6 50.62   Upgrading        : ruby3.2-libs-3.2.8-184.amzn2023.0.7.x86_64          17/105 
+#6 50.65   Upgrading        : ruby4.0-default-gems-4.0.10-41.amzn2023.0.1.noar    18/105 
+#6 50.66   Upgrading        : ruby3.2-3.2.8-184.amzn2023.0.7.x86_64               19/105 
+#6 50.66   Running scriptlet: ruby3.2-3.2.8-184.amzn2023.0.7.x86_64               19/105 
+#6 50.68   Upgrading        : ruby3.2-rubygem-bigdecimal-3.1.3-184.amzn2023.0.    20/105 
+#6 50.69   Upgrading        : ruby3.2-default-gems-3.2.8-184.amzn2023.0.7.noar    21/105 
+#6 50.75   Upgrading        : ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.7.    22/105 
+#6 50.76   Running scriptlet: ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.7.    22/105 
+#6 50.77   Upgrading        : ruby3.2-rubygem-io-console-0.6.0-184.amzn2023.0.    23/105 
+#6 50.78   Upgrading        : ruby3.2-rubygem-json-2.6.3-184.amzn2023.0.7.x86_    24/105 
+#6 50.82   Upgrading        : ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2023.0.7.no    25/105 
+#6 50.86   Upgrading        : ruby3.2-rubygems-3.4.19-184.amzn2023.0.7.noarch     26/105 
+#6 50.88   Upgrading        : ruby3.2-rubygem-psych-5.0.1-184.amzn2023.0.7.x86    27/105 
+#6 50.90   Upgrading        : libarchive-3.7.4-2.amzn2023.0.5.x86_64              28/105 
+#6 50.91   Upgrading        : libcurl-minimal-8.21.0-5.amzn2023.0.5.x86_64        29/105 
+#6 50.92   Upgrading        : curl-minimal-8.21.0-5.amzn2023.0.5.x86_64           30/105 
+#6 50.93   Upgrading        : rpm-libs-4.16.1.3-29.amzn2023.0.10.x86_64           31/105 
+#6 50.98   Upgrading        : rpm-4.16.1.3-29.amzn2023.0.10.x86_64                32/105 
+#6 51.00   Upgrading        : rpm-sign-libs-4.16.1.3-29.amzn2023.0.10.x86_64      33/105 
+#6 51.07   Upgrading        : nginx-core-1:1.30.7-1.amzn2023.0.1.x86_64           34/105 
+#6 51.08   Upgrading        : python3.13-3.13.18-1.amzn2023.0.1.x86_64            35/105 
+#6 51.46   Upgrading        : python3.13-libs-3.13.18-1.amzn2023.0.1.x86_64       36/105 
+#6 51.54   Upgrading        : system-release-2023.12.20261120-0.amzn2023.noarc    37/105 
+#6 51.57   Upgrading        : amazon-linux-repo-cdn-2023.12.20261120-0.amzn202    38/105 
+#6 51.62   Upgrading        : libX11-common-1.8.10-2.amzn2023.0.3.noarch          39/105 
+#6 51.64   Upgrading        : libX11-1.8.10-2.amzn2023.0.3.x86_64                 40/105 
+#6 51.65   Upgrading        : libXi-1.8.4-1.amzn2023.0.1.x86_64                   41/105 
+#6 51.65   Upgrading        : elfutils-default-yama-scope-0.188-3.amzn2023.0.4    42/105 
+#6 51.66   Running scriptlet: elfutils-default-yama-scope-0.188-3.amzn2023.0.4    42/105 
+#6 51.67   Upgrading        : elfutils-libs-0.188-3.amzn2023.0.4.x86_64           43/105 
+#6 51.68   Upgrading        : rpm-build-libs-4.16.1.3-29.amzn2023.0.10.x86_64     44/105 
+#6 51.69   Upgrading        : python3-rpm-4.16.1.3-29.amzn2023.0.10.x86_64        45/105 
+#6 51.70   Upgrading        : java-17-amazon-corretto-1:17.0.21.1.2-1.amzn2023    46/105 
+#6 51.72   Upgrading        : nginx-1:1.30.7-1.amzn2023.0.1.x86_64                47/105 
+#6 51.72   Running scriptlet: nginx-1:1.30.7-1.amzn2023.0.1.x86_64                47/105 
+#6 51.74   Upgrading        : rpm-plugin-selinux-4.16.1.3-29.amzn2023.0.10.x86    48/105 
+#6 51.81   Upgrading        : openssl-1:3.5.8-1.amzn2023.0.4.x86_64               49/105 
+#6 51.83   Upgrading        : perl-URI-5.18-1.amzn2023.0.2.noarch                 50/105 
+#6 51.86   Upgrading        : libstdc++-14.2.1-7.amzn2023.0.3.x86_64              51/105 
+#6 51.91   Upgrading        : python3-virtualenv-20.4.0-3.amzn2023.0.6.noarch     52/105 
+#6 51.93   Upgrading        : perl-podlators-1:4.14-458.amzn2023.0.3.noarch       53/105 
+#6 51.93   Cleanup          : ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2023.0.6.no    54/105 
+#6 51.93   Running scriptlet: ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2023.0.6.no    54/105 
+#6 51.95   Running scriptlet: nginx-1:1.30.6-1.amzn2023.0.1.x86_64                55/105 
+#6 51.95   Cleanup          : nginx-1:1.30.6-1.amzn2023.0.1.x86_64                55/105 
+#6 51.95   Running scriptlet: nginx-1:1.30.6-1.amzn2023.0.1.x86_64                55/105 
+#6 51.97   Cleanup          : amazon-linux-repo-cdn-2023.12.20261102-0.amzn202    56/105 
+#6 51.97   Cleanup          : libstdc++-14.2.1-7.amzn2023.0.2.x86_64              57/105 
+#6 51.98   Cleanup          : device-mapper-1.02.185-1.amzn2023.0.5.x86_64        58/105 
+#6 51.99   Cleanup          : nginx-core-1:1.30.6-1.amzn2023.0.1.x86_64           59/105 
+#6 52.00   Cleanup          : openssl-1:3.5.8-1.amzn2023.0.3.x86_64               60/105 
+#6 52.01   Cleanup          : device-mapper-libs-1.02.185-1.amzn2023.0.5.x86_6    61/105 
+#6 52.02   Cleanup          : python3-rpm-4.16.1.3-29.amzn2023.0.8.x86_64         62/105 
+#6 52.02   Cleanup          : rpm-build-libs-4.16.1.3-29.amzn2023.0.8.x86_64      63/105 
+#6 52.03   Cleanup          : elfutils-libs-0.188-3.amzn2023.0.3.x86_64           64/105 
+#6 52.04   Cleanup          : rpm-sign-libs-4.16.1.3-29.amzn2023.0.8.x86_64       65/105 
+#6 52.05   Cleanup          : rpm-plugin-selinux-4.16.1.3-29.amzn2023.0.8.x86_    66/105 
+#6 52.06   Cleanup          : rpm-4.16.1.3-29.amzn2023.0.8.x86_64                 67/105 
+#6 52.07   Cleanup          : rpm-libs-4.16.1.3-29.amzn2023.0.8.x86_64            68/105 
+#6 52.08   Cleanup          : libarchive-3.7.4-2.amzn2023.0.4.x86_64              69/105 
+#6 52.08   Cleanup          : curl-minimal-8.21.0-5.amzn2023.0.3.x86_64           70/105 
+#6 52.09   Cleanup          : libcurl-minimal-8.21.0-5.amzn2023.0.3.x86_64        71/105 
+#6 52.10   Cleanup          : elfutils-libelf-0.188-3.amzn2023.0.3.x86_64         72/105 
+#6 52.11   Cleanup          : libgomp-14.2.1-7.amzn2023.0.2.x86_64                73/105 
+#6 52.11   Cleanup          : openssl-fips-provider-latest-1:3.5.8-1.amzn2023.    74/105 
+#6 52.12   Cleanup          : ruby3.2-rubygem-json-2.6.3-184.amzn2023.0.6.x86_    75/105 
+#6 52.13   Cleanup          : ruby3.2-default-gems-3.2.8-184.amzn2023.0.6.noar    76/105 
+#6 52.14   Cleanup          : ruby3.2-rubygem-psych-5.0.1-184.amzn2023.0.6.x86    77/105 
+#6 52.15   Cleanup          : ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.6.    78/105 
+#6 52.15   Running scriptlet: ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.6.    78/105 
+#6 52.18   Cleanup          : ruby3.2-rubygem-io-console-0.6.0-184.amzn2023.0.    79/105 
+#6 52.19   Cleanup          : ruby4.0-default-gems-4.0.1-32.amzn2023.0.4.noarc    80/105 
+#6 52.21   Cleanup          : ruby3.2-rubygems-3.4.19-184.amzn2023.0.6.noarch     81/105 
+#6 52.21   Running scriptlet: ruby3.2-rubygems-3.4.19-184.amzn2023.0.6.noarch     81/105 
+#6 52.22   Cleanup          : ruby3.2-3.2.8-184.amzn2023.0.6.x86_64               82/105 
+#6 52.22   Running scriptlet: ruby3.2-3.2.8-184.amzn2023.0.6.x86_64               82/105 
+#6 52.23   Cleanup          : ruby3.2-rubygem-bigdecimal-3.1.3-184.amzn2023.0.    83/105 
+#6 52.25   Cleanup          : ruby3.2-libs-3.2.8-184.amzn2023.0.6.x86_64          84/105 
+#6 52.27   Cleanup          : python3.13-3.13.16-1.amzn2023.0.1.x86_64            85/105 
+#6 52.28   Cleanup          : python3.13-libs-3.13.16-1.amzn2023.0.1.x86_64       86/105 
+#6 52.30   Cleanup          : openssl-libs-1:3.5.8-1.amzn2023.0.3.x86_64          87/105 
+#6 52.31   Cleanup          : sqlite-libs-3.40.0-1.amzn2023.0.8.x86_64            88/105 
+#6 52.31   Cleanup          : java-17-amazon-corretto-1:17.0.21.0.11-1.amzn202    89/105 
+#6 52.32   Cleanup          : elfutils-default-yama-scope-0.188-3.amzn2023.0.3    90/105 
+#6 52.33   Cleanup          : nginx-filesystem-1:1.30.6-1.amzn2023.0.1.noarch     91/105 
+#6 52.33   Cleanup          : system-release-2023.12.20261102-0.amzn2023.noarc    92/105 
+#6 52.34   Cleanup          : python3-virtualenv-20.4.0-3.amzn2023.0.5.noarch     93/105 
+#6 52.35   Cleanup          : perl-podlators-1:4.14-458.amzn2023.0.2.noarch       94/105 
+#6 52.36   Cleanup          : perl-URI-5.18-1.amzn2023.0.1.noarch                 95/105 
+#6 52.37   Cleanup          : libXi-1.8.2-1.amzn2023.0.1.x86_64                   96/105 
+#6 52.37   Cleanup          : libX11-1.8.10-2.amzn2023.0.2.x86_64                 97/105 
+#6 52.38   Cleanup          : java-17-amazon-corretto-headless-1:17.0.21.0.11-    98/105 
+#6 52.38   Running scriptlet: java-17-amazon-corretto-headless-1:17.0.21.0.11-    98/105 
+#6 52.39   Cleanup          : libX11-common-1.8.10-2.amzn2023.0.2.noarch          99/105 
+#6 52.40   Cleanup          : alsa-lib-1.2.7.2-1.amzn2023.0.4.x86_64             100/105 
+#6 52.41   Cleanup          : glibc-2.34-231.amzn2023.0.5.x86_64                 101/105 
+#6 52.42   Cleanup          : glibc-minimal-langpack-2.34-231.amzn2023.0.5.x86   102/105 
+#6 52.43   Cleanup          : glibc-common-2.34-231.amzn2023.0.5.x86_64          103/105 
+#6 52.44   Cleanup          : tzdata-2026e-1.amzn2023.0.1.noarch                 104/105 
+#6 52.45   Cleanup          : libgcc-14.2.1-7.amzn2023.0.2.x86_64                105/105 
+#6 52.45   Running scriptlet: libgcc-14.2.1-7.amzn2023.0.2.x86_64                105/105 
+#6 52.47   Running scriptlet: ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.7.   105/105 
+#6 52.53   Running scriptlet: ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2023.0.7.no   105/105 
+#6 52.54   Running scriptlet: ruby3.2-rubygems-3.4.19-184.amzn2023.0.7.noarch    105/105 
+#6 52.55   Running scriptlet: rpm-4.16.1.3-29.amzn2023.0.10.x86_64               105/105 
+#6 52.57   Running scriptlet: libgcc-14.2.1-7.amzn2023.0.2.x86_64                105/105 
+#6 52.58 /var/tmp/rpm-tmp.1raVaz: line 5: /usr/lib/systemd/systemd-update-helper: No such file or directory
+#6 52.58 
+#6 52.59 /var/tmp/rpm-tmp.Fh3xVl: line 4: /usr/lib/systemd/systemd-update-helper: No such file or directory
+#6 52.59 
+#6 52.61 /var/tmp/rpm-tmp.91PbdQ: line 6: /usr/lib/systemd/systemd-update-helper: No such file or directory
+#6 52.61 
+#6 52.62 /var/tmp/rpm-tmp.DAvWvW: line 2: /usr/lib/systemd/systemd-update-helper: No such file or directory
+#6 52.62 
+#6 53.38   Verifying        : perl-Unicode-Normalize-1.27-459.amzn2023.0.3.x86     1/105 
+#6 53.38   Verifying        : alsa-lib-1.2.7.2-1.amzn2023.0.5.x86_64               2/105 
+#6 53.38   Verifying        : alsa-lib-1.2.7.2-1.amzn2023.0.4.x86_64               3/105 
+#6 53.38   Verifying        : amazon-linux-repo-cdn-2023.12.20261120-0.amzn202     4/105 
+#6 53.38   Verifying        : amazon-linux-repo-cdn-2023.12.20261102-0.amzn202     5/105 
+#6 53.38   Verifying        : curl-minimal-8.21.0-5.amzn2023.0.5.x86_64            6/105 
+#6 53.38   Verifying        : curl-minimal-8.21.0-5.amzn2023.0.3.x86_64            7/105 
+#6 53.38   Verifying        : device-mapper-1.02.185-1.amzn2023.0.6.x86_64         8/105 
+#6 53.38   Verifying        : device-mapper-1.02.185-1.amzn2023.0.5.x86_64         9/105 
+#6 53.38   Verifying        : device-mapper-libs-1.02.185-1.amzn2023.0.6.x86_6    10/105 
+#6 53.38   Verifying        : device-mapper-libs-1.02.185-1.amzn2023.0.5.x86_6    11/105 
+#6 53.38   Verifying        : elfutils-default-yama-scope-0.188-3.amzn2023.0.4    12/105 
+#6 53.38   Verifying        : elfutils-default-yama-scope-0.188-3.amzn2023.0.3    13/105 
+#6 53.38   Verifying        : elfutils-libelf-0.188-3.amzn2023.0.4.x86_64         14/105 
+#6 53.38   Verifying        : elfutils-libelf-0.188-3.amzn2023.0.3.x86_64         15/105 
+#6 53.38   Verifying        : elfutils-libs-0.188-3.amzn2023.0.4.x86_64           16/105 
+#6 53.38   Verifying        : elfutils-libs-0.188-3.amzn2023.0.3.x86_64           17/105 
+#6 53.38   Verifying        : glibc-2.34-231.amzn2023.0.6.x86_64                  18/105 
+#6 53.38   Verifying        : glibc-2.34-231.amzn2023.0.5.x86_64                  19/105 
+#6 53.38   Verifying        : glibc-common-2.34-231.amzn2023.0.6.x86_64           20/105 
+#6 53.38   Verifying        : glibc-common-2.34-231.amzn2023.0.5.x86_64           21/105 
+#6 53.38   Verifying        : glibc-minimal-langpack-2.34-231.amzn2023.0.6.x86    22/105 
+#6 53.38   Verifying        : glibc-minimal-langpack-2.34-231.amzn2023.0.5.x86    23/105 
+#6 53.38   Verifying        : java-17-amazon-corretto-1:17.0.21.1.2-1.amzn2023    24/105 
+#6 53.38   Verifying        : java-17-amazon-corretto-1:17.0.21.0.11-1.amzn202    25/105 
+#6 53.38   Verifying        : java-17-amazon-corretto-headless-1:17.0.21.1.2-1    26/105 
+#6 53.38   Verifying        : java-17-amazon-corretto-headless-1:17.0.21.0.11-    27/105 
+#6 53.38   Verifying        : libX11-1.8.10-2.amzn2023.0.3.x86_64                 28/105 
+#6 53.38   Verifying        : libX11-1.8.10-2.amzn2023.0.2.x86_64                 29/105 
+#6 53.38   Verifying        : libX11-common-1.8.10-2.amzn2023.0.3.noarch          30/105 
+#6 53.39   Verifying        : libX11-common-1.8.10-2.amzn2023.0.2.noarch          31/105 
+#6 53.39   Verifying        : libXi-1.8.4-1.amzn2023.0.1.x86_64                   32/105 
+#6 53.39   Verifying        : libXi-1.8.2-1.amzn2023.0.1.x86_64                   33/105 
+#6 53.39   Verifying        : libarchive-3.7.4-2.amzn2023.0.5.x86_64              34/105 
+#6 53.39   Verifying        : libarchive-3.7.4-2.amzn2023.0.4.x86_64              35/105 
+#6 53.39   Verifying        : libcurl-minimal-8.21.0-5.amzn2023.0.5.x86_64        36/105 
+#6 53.39   Verifying        : libcurl-minimal-8.21.0-5.amzn2023.0.3.x86_64        37/105 
+#6 53.39   Verifying        : libgcc-14.2.1-7.amzn2023.0.3.x86_64                 38/105 
+#6 53.39   Verifying        : libgcc-14.2.1-7.amzn2023.0.2.x86_64                 39/105 
+#6 53.39   Verifying        : libgomp-14.2.1-7.amzn2023.0.3.x86_64                40/105 
+#6 53.39   Verifying        : libgomp-14.2.1-7.amzn2023.0.2.x86_64                41/105 
+#6 53.39   Verifying        : libstdc++-14.2.1-7.amzn2023.0.3.x86_64              42/105 
+#6 53.39   Verifying        : libstdc++-14.2.1-7.amzn2023.0.2.x86_64              43/105 
+#6 53.39   Verifying        : nginx-1:1.30.7-1.amzn2023.0.1.x86_64                44/105 
+#6 53.39   Verifying        : nginx-1:1.30.6-1.amzn2023.0.1.x86_64                45/105 
+#6 53.39   Verifying        : nginx-core-1:1.30.7-1.amzn2023.0.1.x86_64           46/105 
+#6 53.39   Verifying        : nginx-core-1:1.30.6-1.amzn2023.0.1.x86_64           47/105 
+#6 53.39   Verifying        : nginx-filesystem-1:1.30.7-1.amzn2023.0.1.noarch     48/105 
+#6 53.39   Verifying        : nginx-filesystem-1:1.30.6-1.amzn2023.0.1.noarch     49/105 
+#6 53.39   Verifying        : openssl-1:3.5.8-1.amzn2023.0.4.x86_64               50/105 
+#6 53.39   Verifying        : openssl-1:3.5.8-1.amzn2023.0.3.x86_64               51/105 
+#6 53.39   Verifying        : openssl-fips-provider-latest-1:3.5.8-1.amzn2023.    52/105 
+#6 53.39   Verifying        : openssl-fips-provider-latest-1:3.5.8-1.amzn2023.    53/105 
+#6 53.39   Verifying        : openssl-libs-1:3.5.8-1.amzn2023.0.4.x86_64          54/105 
+#6 53.39   Verifying        : openssl-libs-1:3.5.8-1.amzn2023.0.3.x86_64          55/105 
+#6 53.39   Verifying        : perl-URI-5.18-1.amzn2023.0.2.noarch                 56/105 
+#6 53.39   Verifying        : perl-URI-5.18-1.amzn2023.0.1.noarch                 57/105 
+#6 53.39   Verifying        : perl-podlators-1:4.14-458.amzn2023.0.3.noarch       58/105 
+#6 53.39   Verifying        : perl-podlators-1:4.14-458.amzn2023.0.2.noarch       59/105 
+#6 53.39   Verifying        : python3-rpm-4.16.1.3-29.amzn2023.0.10.x86_64        60/105 
+#6 53.39   Verifying        : python3-rpm-4.16.1.3-29.amzn2023.0.8.x86_64         61/105 
+#6 53.39   Verifying        : python3-virtualenv-20.4.0-3.amzn2023.0.6.noarch     62/105 
+#6 53.39   Verifying        : python3-virtualenv-20.4.0-3.amzn2023.0.5.noarch     63/105 
+#6 53.39   Verifying        : python3.13-3.13.18-1.amzn2023.0.1.x86_64            64/105 
+#6 53.39   Verifying        : python3.13-3.13.16-1.amzn2023.0.1.x86_64            65/105 
+#6 53.39   Verifying        : python3.13-libs-3.13.18-1.amzn2023.0.1.x86_64       66/105 
+#6 53.39   Verifying        : python3.13-libs-3.13.16-1.amzn2023.0.1.x86_64       67/105 
+#6 53.39   Verifying        : rpm-4.16.1.3-29.amzn2023.0.10.x86_64                68/105 
+#6 53.39   Verifying        : rpm-4.16.1.3-29.amzn2023.0.8.x86_64                 69/105 
+#6 53.39   Verifying        : rpm-build-libs-4.16.1.3-29.amzn2023.0.10.x86_64     70/105 
+#6 53.39   Verifying        : rpm-build-libs-4.16.1.3-29.amzn2023.0.8.x86_64      71/105 
+#6 53.39   Verifying        : rpm-libs-4.16.1.3-29.amzn2023.0.10.x86_64           72/105 
+#6 53.39   Verifying        : rpm-libs-4.16.1.3-29.amzn2023.0.8.x86_64            73/105 
+#6 53.39   Verifying        : rpm-plugin-selinux-4.16.1.3-29.amzn2023.0.10.x86    74/105 
+#6 53.39   Verifying        : rpm-plugin-selinux-4.16.1.3-29.amzn2023.0.8.x86_    75/105 
+#6 53.39   Verifying        : rpm-sign-libs-4.16.1.3-29.amzn2023.0.10.x86_64      76/105 
+#6 53.39   Verifying        : rpm-sign-libs-4.16.1.3-29.amzn2023.0.8.x86_64       77/105 
+#6 53.39   Verifying        : ruby3.2-3.2.8-184.amzn2023.0.7.x86_64               78/105 
+#6 53.39   Verifying        : ruby3.2-3.2.8-184.amzn2023.0.6.x86_64               79/105 
+#6 53.39   Verifying        : ruby3.2-default-gems-3.2.8-184.amzn2023.0.7.noar    80/105 
+#6 53.39   Verifying        : ruby3.2-default-gems-3.2.8-184.amzn2023.0.6.noar    81/105 
+#6 53.39   Verifying        : ruby3.2-libs-3.2.8-184.amzn2023.0.7.x86_64          82/105 
+#6 53.39   Verifying        : ruby3.2-libs-3.2.8-184.amzn2023.0.6.x86_64          83/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-bigdecimal-3.1.3-184.amzn2023.0.    84/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-bigdecimal-3.1.3-184.amzn2023.0.    85/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.7.    86/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.6.    87/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-io-console-0.6.0-184.amzn2023.0.    88/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-io-console-0.6.0-184.amzn2023.0.    89/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-json-2.6.3-184.amzn2023.0.7.x86_    90/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-json-2.6.3-184.amzn2023.0.6.x86_    91/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-psych-5.0.1-184.amzn2023.0.7.x86    92/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-psych-5.0.1-184.amzn2023.0.6.x86    93/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2023.0.7.no    94/105 
+#6 53.39   Verifying        : ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2023.0.6.no    95/105 
+#6 53.39   Verifying        : ruby3.2-rubygems-3.4.19-184.amzn2023.0.7.noarch     96/105 
+#6 53.39   Verifying        : ruby3.2-rubygems-3.4.19-184.amzn2023.0.6.noarch     97/105 
+#6 53.39   Verifying        : ruby4.0-default-gems-4.0.10-41.amzn2023.0.1.noar    98/105 
+#6 53.39   Verifying        : ruby4.0-default-gems-4.0.1-32.amzn2023.0.4.noarc    99/105 
+#6 53.39   Verifying        : sqlite-libs-3.40.0-1.amzn2023.0.9.x86_64           100/105 
+#6 53.39   Verifying        : sqlite-libs-3.40.0-1.amzn2023.0.8.x86_64           101/105 
+#6 53.39   Verifying        : system-release-2023.12.20261120-0.amzn2023.noarc   102/105 
+#6 53.39   Verifying        : system-release-2023.12.20261102-0.amzn2023.noarc   103/105 
+#6 53.39   Verifying        : tzdata-2026f-1.amzn2023.0.1.noarch                 104/105 
+#6 53.39   Verifying        : tzdata-2026e-1.amzn2023.0.1.noarch                 105/105 
+#6 53.68 
+#6 53.68 Upgraded:
+#6 53.68   alsa-lib-1.2.7.2-1.amzn2023.0.5.x86_64                                        
+#6 53.68   amazon-linux-repo-cdn-2023.12.20261120-0.amzn2023.noarch                      
+#6 53.68   curl-minimal-8.21.0-5.amzn2023.0.5.x86_64                                     
+#6 53.68   device-mapper-1.02.185-1.amzn2023.0.6.x86_64                                  
+#6 53.68   device-mapper-libs-1.02.185-1.amzn2023.0.6.x86_64                             
+#6 53.68   elfutils-default-yama-scope-0.188-3.amzn2023.0.4.noarch                       
+#6 53.68   elfutils-libelf-0.188-3.amzn2023.0.4.x86_64                                   
+#6 53.68   elfutils-libs-0.188-3.amzn2023.0.4.x86_64                                     
+#6 53.68   glibc-2.34-231.amzn2023.0.6.x86_64                                            
+#6 53.68   glibc-common-2.34-231.amzn2023.0.6.x86_64                                     
+#6 53.68   glibc-minimal-langpack-2.34-231.amzn2023.0.6.x86_64                           
+#6 53.68   java-17-amazon-corretto-1:17.0.21.1.2-1.amzn2023.1.x86_64                     
+#6 53.68   java-17-amazon-corretto-headless-1:17.0.21.1.2-1.amzn2023.1.x86_64            
+#6 53.68   libX11-1.8.10-2.amzn2023.0.3.x86_64                                           
+#6 53.68   libX11-common-1.8.10-2.amzn2023.0.3.noarch                                    
+#6 53.68   libXi-1.8.4-1.amzn2023.0.1.x86_64                                             
+#6 53.68   libarchive-3.7.4-2.amzn2023.0.5.x86_64                                        
+#6 53.68   libcurl-minimal-8.21.0-5.amzn2023.0.5.x86_64                                  
+#6 53.68   libgcc-14.2.1-7.amzn2023.0.3.x86_64                                           
+#6 53.68   libgomp-14.2.1-7.amzn2023.0.3.x86_64                                          
+#6 53.68   libstdc++-14.2.1-7.amzn2023.0.3.x86_64                                        
+#6 53.68   nginx-1:1.30.7-1.amzn2023.0.1.x86_64                                          
+#6 53.68   nginx-core-1:1.30.7-1.amzn2023.0.1.x86_64                                     
+#6 53.68   nginx-filesystem-1:1.30.7-1.amzn2023.0.1.noarch                               
+#6 53.68   openssl-1:3.5.8-1.amzn2023.0.4.x86_64                                         
+#6 53.68   openssl-fips-provider-latest-1:3.5.8-1.amzn2023.0.4.x86_64                    
+#6 53.68   openssl-libs-1:3.5.8-1.amzn2023.0.4.x86_64                                    
+#6 53.68   perl-URI-5.18-1.amzn2023.0.2.noarch                                           
+#6 53.68   perl-podlators-1:4.14-458.amzn2023.0.3.noarch                                 
+#6 53.68   python3-rpm-4.16.1.3-29.amzn2023.0.10.x86_64                                  
+#6 53.68   python3-virtualenv-20.4.0-3.amzn2023.0.6.noarch                               
+#6 53.68   python3.13-3.13.18-1.amzn2023.0.1.x86_64                                      
+#6 53.68   python3.13-libs-3.13.18-1.amzn2023.0.1.x86_64                                 
+#6 53.68   rpm-4.16.1.3-29.amzn2023.0.10.x86_64                                          
+#6 53.68   rpm-build-libs-4.16.1.3-29.amzn2023.0.10.x86_64                               
+#6 53.68   rpm-libs-4.16.1.3-29.amzn2023.0.10.x86_64                                     
+#6 53.68   rpm-plugin-selinux-4.16.1.3-29.amzn2023.0.10.x86_64                           
+#6 53.68   rpm-sign-libs-4.16.1.3-29.amzn2023.0.10.x86_64                                
+#6 53.68   ruby3.2-3.2.8-184.amzn2023.0.7.x86_64                                         
+#6 53.68   ruby3.2-default-gems-3.2.8-184.amzn2023.0.7.noarch                            
+#6 53.68   ruby3.2-libs-3.2.8-184.amzn2023.0.7.x86_64                                    
+#6 53.68   ruby3.2-rubygem-bigdecimal-3.1.3-184.amzn2023.0.7.x86_64                      
+#6 53.68   ruby3.2-rubygem-bundler-2.4.19-184.amzn2023.0.7.noarch                        
+#6 53.68   ruby3.2-rubygem-io-console-0.6.0-184.amzn2023.0.7.x86_64                      
+#6 53.68   ruby3.2-rubygem-json-2.6.3-184.amzn2023.0.7.x86_64                            
+#6 53.68   ruby3.2-rubygem-psych-5.0.1-184.amzn2023.0.7.x86_64                           
+#6 53.68   ruby3.2-rubygem-rdoc-6.5.1.1-184.amzn2023.0.7.noarch                          
+#6 53.68   ruby3.2-rubygems-3.4.19-184.amzn2023.0.7.noarch                               
+#6 53.68   ruby4.0-default-gems-4.0.10-41.amzn2023.0.1.noarch                            
+#6 53.68   sqlite-libs-3.40.0-1.amzn2023.0.9.x86_64                                      
+#6 53.68   system-release-2023.12.20261120-0.amzn2023.noarch                             
+#6 53.68   tzdata-2026f-1.amzn2023.0.1.noarch                                            
+#6 53.68 Installed:
+#6 53.68   perl-Unicode-Normalize-1.27-459.amzn2023.0.3.x86_64                           
+#6 53.68 
+#6 53.68 Complete!
+#6 53.89 9 files removed
+#6 DONE 53.9s
+
+#7 [3/5] COPY patch-jars.sh /tmp/patch-jars.sh
+#7 DONE 0.1s
+
+#8 [4/5] RUN bash /tmp/patch-jars.sh && rm -f /tmp/patch-jars.sh
+#8 0.912 REPLACED /usr/lib/spark/jars/netty-all-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-all-4.2.21.Final.jar
+#8 2.760 REPLACED /usr/lib/spark/jars/netty-buffer-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-buffer-4.2.21.Final.jar
+#8 3.059 REPLACED /usr/lib/spark/jars/netty-codec-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-4.2.21.Final.jar
+#8 4.686 REPLACED /usr/lib/spark/jars/netty-codec-base-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-base-4.2.21.Final.jar
+#8 7.098 REPLACED /usr/lib/spark/jars/netty-codec-classes-quic-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-classes-quic-4.2.21.Final.jar
+#8 8.087 REPLACED /usr/lib/spark/jars/netty-codec-compression-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-compression-4.2.21.Final.jar
+#8 8.374 REPLACED /usr/lib/spark/jars/netty-codec-dns-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-dns-4.2.21.Final.jar
+#8 9.105 REPLACED /usr/lib/spark/jars/netty-codec-http-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-http-4.2.21.Final.jar
+#8 10.67 REPLACED /usr/lib/spark/jars/netty-codec-http2-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-http2-4.2.21.Final.jar
+#8 11.03 REPLACED /usr/lib/spark/jars/netty-codec-http3-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-http3-4.2.21.Final.jar
+#8 12.18 REPLACED /usr/lib/spark/jars/netty-codec-marshalling-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-marshalling-4.2.21.Final.jar
+#8 13.03 REPLACED /usr/lib/spark/jars/netty-codec-protobuf-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-protobuf-4.2.21.Final.jar
+#8 14.35 REPLACED /usr/lib/spark/jars/netty-codec-socks-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-socks-4.2.21.Final.jar
+#8 17.93 REPLACED /usr/lib/spark/jars/netty-common-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-common-4.2.21.Final.jar
+#8 19.01 REPLACED /usr/lib/spark/jars/netty-handler-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-handler-4.2.21.Final.jar
+#8 19.98 REPLACED /usr/lib/spark/jars/netty-handler-proxy-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-handler-proxy-4.2.21.Final.jar
+#8 21.54 REPLACED /usr/lib/spark/jars/netty-resolver-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-resolver-4.2.21.Final.jar
+#8 22.25 REPLACED /usr/lib/spark/jars/netty-resolver-dns-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-resolver-dns-4.2.21.Final.jar
+#8 23.88 REPLACED /usr/lib/spark/jars/netty-transport-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-4.2.21.Final.jar
+#8 24.20 REPLACED /usr/lib/spark/jars/netty-transport-classes-epoll-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-classes-epoll-4.2.21.Final.jar
+#8 25.50 REPLACED /usr/lib/spark/jars/netty-transport-classes-io_uring-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-classes-io_uring-4.2.21.Final.jar
+#8 26.61 REPLACED /usr/lib/spark/jars/netty-transport-classes-kqueue-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-classes-kqueue-4.2.21.Final.jar
+#8 27.54 REPLACED /usr/lib/spark/jars/netty-transport-native-unix-common-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-native-unix-common-4.2.21.Final.jar
+#8 28.07 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-linux-aarch_64.jar
+#8 29.01 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-linux-x86_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-linux-x86_64.jar
+#8 29.47 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-osx-aarch_64.jar
+#8 30.12 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-osx-x86_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-osx-x86_64.jar
+#8 31.46 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-windows-x86_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-windows-x86_64.jar
+#8 32.55 REPLACED /usr/lib/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/spark/jars/netty-transport-native-epoll-4.2.21.Final-linux-aarch_64.jar
+#8 33.65 REPLACED /usr/lib/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-riscv64.jar -> /usr/lib/spark/jars/netty-transport-native-epoll-4.2.21.Final-linux-riscv64.jar
+#8 34.28 REPLACED /usr/lib/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-x86_64.jar -> /usr/lib/spark/jars/netty-transport-native-epoll-4.2.21.Final-linux-x86_64.jar
+#8 35.87 REPLACED /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.21.Final-linux-aarch_64.jar
+#8 37.37 REPLACED /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-riscv64.jar -> /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.21.Final-linux-riscv64.jar
+#8 38.26 REPLACED /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-x86_64.jar -> /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.21.Final-linux-x86_64.jar
+#8 39.63 REPLACED /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.21.Final-osx-aarch_64.jar
+#8 40.74 REPLACED /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.7.Final-osx-x86_64.jar -> /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.21.Final-osx-x86_64.jar
+#8 41.27 REPLACED /usr/lib/livy/rsc-jars/netty-all-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-all-4.2.21.Final.jar
+#8 42.73 REPLACED /usr/lib/livy/rsc-jars/netty-buffer-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-buffer-4.2.21.Final.jar
+#8 43.95 REPLACED /usr/lib/livy/rsc-jars/netty-codec-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-4.2.21.Final.jar
+#8 44.38 REPLACED /usr/lib/livy/rsc-jars/netty-codec-base-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-base-4.2.21.Final.jar
+#8 45.09 REPLACED /usr/lib/livy/rsc-jars/netty-codec-classes-quic-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-classes-quic-4.2.21.Final.jar
+#8 46.73 REPLACED /usr/lib/livy/rsc-jars/netty-codec-compression-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-compression-4.2.21.Final.jar
+#8 51.28 REPLACED /usr/lib/livy/rsc-jars/netty-codec-dns-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-dns-4.2.21.Final.jar
+#8 52.49 REPLACED /usr/lib/livy/rsc-jars/netty-codec-haproxy-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-haproxy-4.2.21.Final.jar
+#8 54.61 REPLACED /usr/lib/livy/rsc-jars/netty-codec-http-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-http-4.2.21.Final.jar
+#8 56.77 REPLACED /usr/lib/livy/rsc-jars/netty-codec-http2-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-http2-4.2.21.Final.jar
+#8 58.24 REPLACED /usr/lib/livy/rsc-jars/netty-codec-http3-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-http3-4.2.21.Final.jar
+#8 59.05 REPLACED /usr/lib/livy/rsc-jars/netty-codec-marshalling-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-marshalling-4.2.21.Final.jar
+#8 60.51 REPLACED /usr/lib/livy/rsc-jars/netty-codec-memcache-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-memcache-4.2.21.Final.jar
+#8 61.42 REPLACED /usr/lib/livy/rsc-jars/netty-codec-mqtt-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-mqtt-4.2.21.Final.jar
+#8 61.96 REPLACED /usr/lib/livy/rsc-jars/netty-codec-protobuf-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-protobuf-4.2.21.Final.jar
+#8 63.26 REPLACED /usr/lib/livy/rsc-jars/netty-codec-redis-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-redis-4.2.21.Final.jar
+#8 65.00 REPLACED /usr/lib/livy/rsc-jars/netty-codec-smtp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-smtp-4.2.21.Final.jar
+#8 65.34 REPLACED /usr/lib/livy/rsc-jars/netty-codec-socks-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-socks-4.2.21.Final.jar
+#8 66.83 REPLACED /usr/lib/livy/rsc-jars/netty-codec-stomp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-stomp-4.2.21.Final.jar
+#8 68.47 REPLACED /usr/lib/livy/rsc-jars/netty-codec-xml-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-xml-4.2.21.Final.jar
+#8 71.71 REPLACED /usr/lib/livy/rsc-jars/netty-common-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-common-4.2.21.Final.jar
+#8 72.20 REPLACED /usr/lib/livy/rsc-jars/netty-handler-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-handler-4.2.21.Final.jar
+#8 74.01 REPLACED /usr/lib/livy/rsc-jars/netty-handler-proxy-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-handler-proxy-4.2.21.Final.jar
+#8 76.60 REPLACED /usr/lib/livy/rsc-jars/netty-handler-ssl-ocsp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-handler-ssl-ocsp-4.2.21.Final.jar
+#8 77.12 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-resolver-4.2.21.Final.jar
+#8 79.34 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-4.2.21.Final.jar
+#8 80.29 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-classes-macos-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-classes-macos-4.2.21.Final.jar
+#8 81.84 REPLACED /usr/lib/livy/rsc-jars/netty-transport-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-4.2.21.Final.jar
+#8 85.64 REPLACED /usr/lib/livy/rsc-jars/netty-transport-classes-epoll-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-classes-epoll-4.2.21.Final.jar
+#8 87.23 REPLACED /usr/lib/livy/rsc-jars/netty-transport-classes-io_uring-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-classes-io_uring-4.2.21.Final.jar
+#8 89.02 REPLACED /usr/lib/livy/rsc-jars/netty-transport-classes-kqueue-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-classes-kqueue-4.2.21.Final.jar
+#8 90.75 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-unix-common-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-unix-common-4.2.21.Final.jar
+#8 91.33 REPLACED /usr/lib/livy/rsc-jars/netty-transport-rxtx-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-rxtx-4.2.21.Final.jar
+#8 92.32 REPLACED /usr/lib/livy/rsc-jars/netty-transport-sctp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-sctp-4.2.21.Final.jar
+#8 96.84 REPLACED /usr/lib/livy/rsc-jars/netty-transport-udt-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-udt-4.2.21.Final.jar
+#8 98.41 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-linux-aarch_64.jar
+#8 99.40 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-linux-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-linux-x86_64.jar
+#8 103.0 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-osx-aarch_64.jar
+#8 104.2 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-osx-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-osx-x86_64.jar
+#8 109.8 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-windows-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-windows-x86_64.jar
+#8 113.2 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.21.Final-osx-aarch_64.jar
+#8 114.6 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.7.Final-osx-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.21.Final-osx-x86_64.jar
+#8 117.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.21.Final-linux-aarch_64.jar
+#8 122.2 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.7.Final-linux-riscv64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.21.Final-linux-riscv64.jar
+#8 124.2 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.7.Final-linux-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.21.Final-linux-x86_64.jar
+#8 125.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.21.Final-linux-aarch_64.jar
+#8 125.8 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.7.Final-linux-riscv64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.21.Final-linux-riscv64.jar
+#8 127.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.7.Final-linux-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.21.Final-linux-x86_64.jar
+#8 129.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.21.Final-osx-aarch_64.jar
+#8 133.1 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.7.Final-osx-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.21.Final-osx-x86_64.jar
+#8 133.8 REPLACED /usr/lib/hadoop/lib/netty-all-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-all-4.1.141.Final.jar
+#8 134.8 REPLACED /usr/lib/hadoop/lib/netty-buffer-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-buffer-4.1.141.Final.jar
+#8 135.5 REPLACED /usr/lib/hadoop/lib/netty-codec-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-4.1.141.Final.jar
+#8 136.4 REPLACED /usr/lib/hadoop/lib/netty-codec-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-dns-4.1.141.Final.jar
+#8 136.7 REPLACED /usr/lib/hadoop/lib/netty-codec-haproxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-haproxy-4.1.141.Final.jar
+#8 138.1 REPLACED /usr/lib/hadoop/lib/netty-codec-http-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http-4.1.141.Final.jar
+#8 142.4 REPLACED /usr/lib/hadoop/lib/netty-codec-http2-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http2-4.1.141.Final.jar
+#8 143.3 REPLACED /usr/lib/hadoop/lib/netty-codec-memcache-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-memcache-4.1.141.Final.jar
+#8 144.5 REPLACED /usr/lib/hadoop/lib/netty-codec-mqtt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-mqtt-4.1.141.Final.jar
+#8 145.3 REPLACED /usr/lib/hadoop/lib/netty-codec-redis-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-redis-4.1.141.Final.jar
+#8 145.7 REPLACED /usr/lib/hadoop/lib/netty-codec-smtp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-smtp-4.1.141.Final.jar
+#8 146.6 REPLACED /usr/lib/hadoop/lib/netty-codec-socks-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-socks-4.1.141.Final.jar
+#8 147.6 REPLACED /usr/lib/hadoop/lib/netty-codec-stomp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-stomp-4.1.141.Final.jar
+#8 148.3 REPLACED /usr/lib/hadoop/lib/netty-codec-xml-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-xml-4.1.141.Final.jar
+#8 149.6 REPLACED /usr/lib/hadoop/lib/netty-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-common-4.1.141.Final.jar
+#8 151.0 REPLACED /usr/lib/hadoop/lib/netty-handler-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-4.1.141.Final.jar
+#8 151.4 REPLACED /usr/lib/hadoop/lib/netty-handler-proxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-proxy-4.1.141.Final.jar
+#8 152.9 REPLACED /usr/lib/hadoop/lib/netty-handler-ssl-ocsp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-ssl-ocsp-4.1.141.Final.jar
+#8 153.6 REPLACED /usr/lib/hadoop/lib/netty-resolver-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-4.1.141.Final.jar
+#8 154.0 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-4.1.141.Final.jar
+#8 155.8 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-classes-macos-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-classes-macos-4.1.141.Final.jar
+#8 157.6 REPLACED /usr/lib/hadoop/lib/netty-transport-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-4.1.141.Final.jar
+#8 159.4 REPLACED /usr/lib/hadoop/lib/netty-transport-classes-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-epoll-4.1.141.Final.jar
+#8 160.1 REPLACED /usr/lib/hadoop/lib/netty-transport-classes-kqueue-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-kqueue-4.1.141.Final.jar
+#8 165.2 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final.jar
+#8 165.8 REPLACED /usr/lib/hadoop/lib/netty-transport-native-unix-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-unix-common-4.1.141.Final.jar
+#8 167.6 REPLACED /usr/lib/hadoop/lib/netty-transport-rxtx-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-rxtx-4.1.141.Final.jar
+#8 168.4 REPLACED /usr/lib/hadoop/lib/netty-transport-sctp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-sctp-4.1.141.Final.jar
+#8 170.4 REPLACED /usr/lib/hadoop/lib/netty-transport-udt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-udt-4.1.141.Final.jar
+#8 171.6 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-aarch_64.jar
+#8 172.7 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-x86_64.jar
+#8 174.1 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final-linux-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-aarch_64.jar
+#8 178.0 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final-linux-riscv64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-riscv64.jar
+#8 178.3 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final-linux-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-x86_64.jar
+#8 180.3 REPLACED /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-aarch_64.jar
+#8 182.0 REPLACED /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-x86_64.jar
+#8 182.0 SYMLINK /usr/lib/hadoop/client/netty-all-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-all-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-buffer-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-buffer-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-dns-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-haproxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-haproxy-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-http-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-http2-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http2-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-memcache-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-memcache-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-mqtt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-mqtt-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-redis-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-redis-4.1.141.Final.jar
+#8 182.1 SYMLINK /usr/lib/hadoop/client/netty-codec-smtp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-smtp-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-codec-socks-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-socks-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-codec-stomp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-stomp-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-codec-xml-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-xml-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-common-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-handler-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-handler-proxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-proxy-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-handler-ssl-ocsp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-ssl-ocsp-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-resolver-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-classes-macos-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-classes-macos-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-transport-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-transport-classes-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-epoll-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-transport-classes-kqueue-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-kqueue-4.1.141.Final.jar
+#8 182.2 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-native-unix-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-unix-common-4.1.141.Final.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-rxtx-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-rxtx-4.1.141.Final.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-sctp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-sctp-4.1.141.Final.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-udt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-udt-4.1.141.Final.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-native-macos-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-aarch_64.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-native-macos-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-x86_64.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final-linux-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-aarch_64.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final-linux-riscv64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-riscv64.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final-linux-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-x86_64.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-native-kqueue-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-aarch_64.jar
+#8 182.3 SYMLINK /usr/lib/hadoop/client/netty-transport-native-kqueue-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-x86_64.jar
+#8 184.2 REPLACED /usr/lib/hadoop/lib/bcprov-jdk18on-1.78.1.jar -> /usr/lib/hadoop/lib/bcprov-jdk18on-1.85.2.jar
+#8 185.5 REPLACED /usr/lib/livy/rsc-jars/bcprov-jdk18on-1.80.jar -> /usr/lib/livy/rsc-jars/bcprov-jdk18on-1.85.2.jar
+#8 187.1 REPLACED /usr/lib/spark/jars/jackson-core-2.21.2.jar -> /usr/lib/spark/jars/jackson-core-2.21.9.jar
+#8 187.9 REPLACED /usr/lib/spark/jars/jackson-databind-2.21.2.jar -> /usr/lib/spark/jars/jackson-databind-2.21.9.jar
+#8 189.2 REPLACED /usr/lib/spark/jars/jackson-dataformat-yaml-2.21.2.jar -> /usr/lib/spark/jars/jackson-dataformat-yaml-2.21.9.jar
+#8 193.4 REPLACED /usr/lib/spark/jars/jackson-datatype-jsr310-2.21.2.jar -> /usr/lib/spark/jars/jackson-datatype-jsr310-2.21.9.jar
+#8 194.4 REPLACED /usr/lib/spark/jars/jackson-module-scala_2.13-2.21.2.jar -> /usr/lib/spark/jars/jackson-module-scala_2.13-2.21.9.jar
+#8 195.9 REPLACED /usr/lib/spark/jars/guava-33.4.8-jre.jar -> /usr/lib/spark/jars/guava-33.8.0-jre.jar
+#8 196.9 REPLACED /usr/lib/spark/jars/lz4-java-1.11.0.jar -> /usr/lib/spark/jars/lz4-java-1.11.4.jar
+#8 198.0 REPLACED /usr/lib/spark/jars/snappy-java-1.1.10.8.jar -> /usr/lib/spark/jars/snappy-java-1.1.10.12.jar
+#8 198.8 REPLACED /usr/lib/hadoop/lib/snappy-java-1.1.10.4.jar -> /usr/lib/hadoop/lib/snappy-java-1.1.10.12.jar
+#8 198.8 SYMLINK /usr/lib/hadoop/client/snappy-java-1.1.10.4.jar -> /usr/lib/hadoop/lib/snappy-java-1.1.10.12.jar
+#8 201.2 REPLACED /usr/lib/spark/jars/zookeeper-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/spark/jars/zookeeper-3.9.7.jar
+#8 202.9 REPLACED /usr/lib/spark/jars/zookeeper-jute-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/spark/jars/zookeeper-jute-3.9.7.jar
+#8 204.4 REPLACED /usr/lib/hadoop/lib/zookeeper-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/hadoop/lib/zookeeper-3.9.7.jar
+#8 205.2 REPLACED /usr/lib/hadoop/lib/zookeeper-jute-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/hadoop/lib/zookeeper-jute-3.9.7.jar
+#8 206.7 REPLACED /usr/lib/spark/jars/log4j-1.2-api-2.24.3.jar -> /usr/lib/spark/jars/log4j-1.2-api-2.25.5.jar
+#8 207.9 REPLACED /usr/lib/spark/jars/log4j-api-2.24.3.jar -> /usr/lib/spark/jars/log4j-api-2.25.5.jar
+#8 209.4 REPLACED /usr/lib/spark/jars/log4j-core-2.24.3.jar -> /usr/lib/spark/jars/log4j-core-2.25.5.jar
+#8 210.2 REPLACED /usr/lib/spark/jars/log4j-layout-template-json-2.24.3.jar -> /usr/lib/spark/jars/log4j-layout-template-json-2.25.5.jar
+#8 211.0 REPLACED /usr/lib/spark/jars/log4j-slf4j2-impl-2.24.3.jar -> /usr/lib/spark/jars/log4j-slf4j2-impl-2.25.5.jar
+#8 212.0 REPLACED /usr/lib/hadoop/lib/commons-lang3-3.17.0.jar -> /usr/lib/hadoop/lib/commons-lang3-3.19.0.jar
+#8 212.6 REPLACED /usr/lib/spark/jars/vertx-auth-common-4.5.25.jar -> /usr/lib/spark/jars/vertx-auth-common-4.5.36.jar
+#8 213.8 REPLACED /usr/lib/spark/jars/vertx-core-4.5.25.jar -> /usr/lib/spark/jars/vertx-core-4.5.36.jar
+#8 214.5 REPLACED /usr/lib/spark/jars/vertx-web-client-4.5.25.jar -> /usr/lib/spark/jars/vertx-web-client-4.5.36.jar
+#8 215.2 REPLACED /usr/lib/spark/jars/vertx-web-common-4.5.25.jar -> /usr/lib/spark/jars/vertx-web-common-4.5.36.jar
+#8 215.2 Jar replacements done: 184 entries
+#8 DONE 215.3s
+
+#9 [5/5] RUN python3.11 -m pip install --no-cache-dir --upgrade --ignore-installed "pip==26.3" "setuptools==84.2.1"  && python3.13 -m pip install --no-cache-dir --upgrade --ignore-installed "pip==26.3"  && rpm -e python3.11-pip python3.11-setuptools python3.13-pip  && python3.11 -m pip --version && python3.13 -m pip --version  && python3.11 -c "import setuptools; print('setuptools', setuptools.__version__)"
+#9 0.979 Collecting pip==26.3
+#9 1.113   Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+#9 1.319      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 9.8 MB/s eta 0:00:00
+#9 1.679 Collecting setuptools==84.2.1
+#9 1.728   Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
+#9 1.748      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 876.3/876.3 kB 48.9 MB/s eta 0:00:00
+#9 1.923 Installing collected packages: setuptools, pip
+#9 3.132 Successfully installed pip-26.3 setuptools-84.2.1
+#9 3.132 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.679 Collecting pip==26.3
+#9 3.836   Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+#9 3.884 Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+#9 4.114    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 16.1 MB/s eta 0:00:00
+#9 4.132 Installing collected packages: pip
+#9 4.967 Successfully installed pip-26.3
+#9 4.968 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 5.114 warning: file /usr/share/man/man1/pip3.11.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-wheel.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-uninstall.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-show.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-search.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-list.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-install.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-help.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-hash.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-freeze.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-download.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-debug.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-config.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-check.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip3.11-cache.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-wheel.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-uninstall.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-show.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-search.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-list.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-install.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-help.1.gz: remove failed: No such file or directory
+#9 5.114 warning: file /usr/share/man/man1/pip-3.11-hash.1.gz: remove failed: No such file or directory
+#9 5.115 warning: file /usr/share/man/man1/pip-3.11-freeze.1.gz: remove failed: No such file or directory
+#9 5.115 warning: file /usr/share/man/man1/pip-3.11-download.1.gz: remove failed: No such file or directory
+#9 5.115 warning: file /usr/share/man/man1/pip-3.11-debug.1.gz: remove failed: No such file or directory
+#9 5.115 warning: file /usr/share/man/man1/pip-3.11-config.1.gz: remove failed: No such file or directory
+#9 5.115 warning: file /usr/share/man/man1/pip-3.11-check.1.gz: remove failed: No such file or directory
+#9 5.115 warning: file /usr/share/man/man1/pip-3.11-cache.1.gz: remove failed: No such file or directory
+#9 5.115 warning: file /usr/share/doc/python3.11-pip: remove failed: No such file or directory
+#9 5.185 warning: file /usr/share/doc/python3.11-setuptools: remove failed: No such file or directory
+#9 5.220 warning: file /usr/share/doc/python3.13-pip: remove failed: No such file or directory
+#9 5.465 pip 26.3 from /usr/local/lib/python3.11/site-packages/pip (python 3.11)
+#9 5.578 pip 26.3 from /usr/local/lib/python3.13/site-packages/pip (python 3.13)
+#9 5.706 setuptools 84.2.1
+#9 DONE 5.7s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.9s done
+#10 writing image sha256:3e6efa45906b229c13b6c8f86f990a1bf11a51b9094649e7e932905f2dd13515 done
+#10 naming to docker.io/library/emr-spark-8.2.0-patched:latest 0.0s done
+#10 DONE 1.9s
+
+View build details: docker-desktop://dashboard/build/default/default/nzxoqweejostgtrro84r4pmpp
+
+Build multi-platform images faster with Docker Build Cloud: https://docs.docker.com/go/docker-build-cloud

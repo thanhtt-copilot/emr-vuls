@@ -1,0 +1,282 @@
+2026/11/26 20:58:09 http2: server: error reading preface from client //./pipe/docker_engine: file has already been closed
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.49kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/emr-on-eks/spark/emr-spark-8.2.0@sha256:931a64f282e2e1455bbcce77a24ab9ae6bb37d033690cfff4f430c201db0d3b8
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM public.ecr.aws/emr-on-eks/spark/emr-spark-8.2.0@sha256:931a64f282e2e1455bbcce77a24ab9ae6bb37d033690cfff4f430c201db0d3b8
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 3.41kB done
+#5 DONE 0.0s
+
+#6 [2/5] RUN dnf -y upgrade --releasever=latest  && dnf clean all && rm -rf /var/cache/dnf
+#6 CACHED
+
+#7 [3/5] COPY patch-jars.sh /tmp/patch-jars.sh
+#7 DONE 0.0s
+
+#8 [4/5] RUN bash /tmp/patch-jars.sh && rm -f /tmp/patch-jars.sh
+#8 0.623 REPLACED /usr/lib/spark/jars/netty-all-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-all-4.2.21.Final.jar
+#8 3.047 REPLACED /usr/lib/spark/jars/netty-buffer-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-buffer-4.2.21.Final.jar
+#8 3.376 REPLACED /usr/lib/spark/jars/netty-codec-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-4.2.21.Final.jar
+#8 4.105 REPLACED /usr/lib/spark/jars/netty-codec-base-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-base-4.2.21.Final.jar
+#8 5.026 REPLACED /usr/lib/spark/jars/netty-codec-classes-quic-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-classes-quic-4.2.21.Final.jar
+#8 5.955 REPLACED /usr/lib/spark/jars/netty-codec-compression-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-compression-4.2.21.Final.jar
+#8 7.336 REPLACED /usr/lib/spark/jars/netty-codec-dns-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-dns-4.2.21.Final.jar
+#8 13.00 REPLACED /usr/lib/spark/jars/netty-codec-http-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-http-4.2.21.Final.jar
+#8 16.76 REPLACED /usr/lib/spark/jars/netty-codec-http2-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-http2-4.2.21.Final.jar
+#8 17.55 REPLACED /usr/lib/spark/jars/netty-codec-http3-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-http3-4.2.21.Final.jar
+#8 18.69 REPLACED /usr/lib/spark/jars/netty-codec-marshalling-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-marshalling-4.2.21.Final.jar
+#8 19.66 REPLACED /usr/lib/spark/jars/netty-codec-protobuf-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-protobuf-4.2.21.Final.jar
+#8 25.49 REPLACED /usr/lib/spark/jars/netty-codec-socks-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-codec-socks-4.2.21.Final.jar
+#8 26.17 REPLACED /usr/lib/spark/jars/netty-common-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-common-4.2.21.Final.jar
+#8 28.36 REPLACED /usr/lib/spark/jars/netty-handler-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-handler-4.2.21.Final.jar
+#8 28.90 REPLACED /usr/lib/spark/jars/netty-handler-proxy-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-handler-proxy-4.2.21.Final.jar
+#8 32.72 REPLACED /usr/lib/spark/jars/netty-resolver-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-resolver-4.2.21.Final.jar
+#8 36.57 REPLACED /usr/lib/spark/jars/netty-resolver-dns-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-resolver-dns-4.2.21.Final.jar
+#8 37.38 REPLACED /usr/lib/spark/jars/netty-transport-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-4.2.21.Final.jar
+#8 42.94 curl: (35) TLS connect error: error:0A000126:SSL routines::unexpected eof while reading
+#8 44.80 REPLACED /usr/lib/spark/jars/netty-transport-classes-epoll-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-classes-epoll-4.2.21.Final.jar
+#8 46.00 REPLACED /usr/lib/spark/jars/netty-transport-classes-io_uring-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-classes-io_uring-4.2.21.Final.jar
+#8 47.32 REPLACED /usr/lib/spark/jars/netty-transport-classes-kqueue-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-classes-kqueue-4.2.21.Final.jar
+#8 49.99 REPLACED /usr/lib/spark/jars/netty-transport-native-unix-common-4.2.7.Final.jar -> /usr/lib/spark/jars/netty-transport-native-unix-common-4.2.21.Final.jar
+#8 51.81 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-linux-aarch_64.jar
+#8 52.96 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-linux-x86_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-linux-x86_64.jar
+#8 54.35 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-osx-aarch_64.jar
+#8 56.31 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-osx-x86_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-osx-x86_64.jar
+#8 57.90 REPLACED /usr/lib/spark/jars/netty-codec-native-quic-4.2.7.Final-windows-x86_64.jar -> /usr/lib/spark/jars/netty-codec-native-quic-4.2.21.Final-windows-x86_64.jar
+#8 62.49 REPLACED /usr/lib/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/spark/jars/netty-transport-native-epoll-4.2.21.Final-linux-aarch_64.jar
+#8 63.43 REPLACED /usr/lib/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-riscv64.jar -> /usr/lib/spark/jars/netty-transport-native-epoll-4.2.21.Final-linux-riscv64.jar
+#8 65.37 REPLACED /usr/lib/spark/jars/netty-transport-native-epoll-4.2.7.Final-linux-x86_64.jar -> /usr/lib/spark/jars/netty-transport-native-epoll-4.2.21.Final-linux-x86_64.jar
+#8 68.23 REPLACED /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.21.Final-linux-aarch_64.jar
+#8 68.82 REPLACED /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-riscv64.jar -> /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.21.Final-linux-riscv64.jar
+#8 69.80 REPLACED /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.7.Final-linux-x86_64.jar -> /usr/lib/spark/jars/netty-transport-native-io_uring-4.2.21.Final-linux-x86_64.jar
+#8 70.75 REPLACED /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.21.Final-osx-aarch_64.jar
+#8 72.27 REPLACED /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.7.Final-osx-x86_64.jar -> /usr/lib/spark/jars/netty-transport-native-kqueue-4.2.21.Final-osx-x86_64.jar
+#8 74.78 REPLACED /usr/lib/livy/rsc-jars/netty-all-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-all-4.2.21.Final.jar
+#8 77.06 REPLACED /usr/lib/livy/rsc-jars/netty-buffer-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-buffer-4.2.21.Final.jar
+#8 82.18 REPLACED /usr/lib/livy/rsc-jars/netty-codec-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-4.2.21.Final.jar
+#8 84.41 REPLACED /usr/lib/livy/rsc-jars/netty-codec-base-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-base-4.2.21.Final.jar
+#8 85.06 REPLACED /usr/lib/livy/rsc-jars/netty-codec-classes-quic-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-classes-quic-4.2.21.Final.jar
+#8 86.44 REPLACED /usr/lib/livy/rsc-jars/netty-codec-compression-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-compression-4.2.21.Final.jar
+#8 86.84 REPLACED /usr/lib/livy/rsc-jars/netty-codec-dns-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-dns-4.2.21.Final.jar
+#8 88.05 REPLACED /usr/lib/livy/rsc-jars/netty-codec-haproxy-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-haproxy-4.2.21.Final.jar
+#8 88.49 REPLACED /usr/lib/livy/rsc-jars/netty-codec-http-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-http-4.2.21.Final.jar
+#8 89.16 REPLACED /usr/lib/livy/rsc-jars/netty-codec-http2-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-http2-4.2.21.Final.jar
+#8 91.58 REPLACED /usr/lib/livy/rsc-jars/netty-codec-http3-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-http3-4.2.21.Final.jar
+#8 92.38 REPLACED /usr/lib/livy/rsc-jars/netty-codec-marshalling-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-marshalling-4.2.21.Final.jar
+#8 92.98 REPLACED /usr/lib/livy/rsc-jars/netty-codec-memcache-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-memcache-4.2.21.Final.jar
+#8 93.74 REPLACED /usr/lib/livy/rsc-jars/netty-codec-mqtt-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-mqtt-4.2.21.Final.jar
+#8 94.61 REPLACED /usr/lib/livy/rsc-jars/netty-codec-protobuf-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-protobuf-4.2.21.Final.jar
+#8 100.1 REPLACED /usr/lib/livy/rsc-jars/netty-codec-redis-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-redis-4.2.21.Final.jar
+#8 101.8 REPLACED /usr/lib/livy/rsc-jars/netty-codec-smtp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-smtp-4.2.21.Final.jar
+#8 103.2 REPLACED /usr/lib/livy/rsc-jars/netty-codec-socks-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-socks-4.2.21.Final.jar
+#8 104.5 REPLACED /usr/lib/livy/rsc-jars/netty-codec-stomp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-stomp-4.2.21.Final.jar
+#8 107.9 REPLACED /usr/lib/livy/rsc-jars/netty-codec-xml-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-codec-xml-4.2.21.Final.jar
+#8 108.4 REPLACED /usr/lib/livy/rsc-jars/netty-common-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-common-4.2.21.Final.jar
+#8 109.3 REPLACED /usr/lib/livy/rsc-jars/netty-handler-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-handler-4.2.21.Final.jar
+#8 110.3 REPLACED /usr/lib/livy/rsc-jars/netty-handler-proxy-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-handler-proxy-4.2.21.Final.jar
+#8 111.4 REPLACED /usr/lib/livy/rsc-jars/netty-handler-ssl-ocsp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-handler-ssl-ocsp-4.2.21.Final.jar
+#8 111.9 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-resolver-4.2.21.Final.jar
+#8 113.3 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-4.2.21.Final.jar
+#8 114.0 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-classes-macos-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-classes-macos-4.2.21.Final.jar
+#8 114.9 REPLACED /usr/lib/livy/rsc-jars/netty-transport-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-4.2.21.Final.jar
+#8 116.6 REPLACED /usr/lib/livy/rsc-jars/netty-transport-classes-epoll-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-classes-epoll-4.2.21.Final.jar
+#8 118.7 REPLACED /usr/lib/livy/rsc-jars/netty-transport-classes-io_uring-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-classes-io_uring-4.2.21.Final.jar
+#8 141.8 curl: (56) OpenSSL SSL_read: OpenSSL/3.5.8: error:0A000126:SSL routines::unexpected eof while reading, errno 0
+#8 145.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-classes-kqueue-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-classes-kqueue-4.2.21.Final.jar
+#8 147.1 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-unix-common-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-unix-common-4.2.21.Final.jar
+#8 147.5 REPLACED /usr/lib/livy/rsc-jars/netty-transport-rxtx-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-rxtx-4.2.21.Final.jar
+#8 148.2 REPLACED /usr/lib/livy/rsc-jars/netty-transport-sctp-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-sctp-4.2.21.Final.jar
+#8 149.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-udt-4.2.7.Final.jar -> /usr/lib/livy/rsc-jars/netty-transport-udt-4.2.21.Final.jar
+#8 150.3 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-linux-aarch_64.jar
+#8 151.1 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-linux-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-linux-x86_64.jar
+#8 152.0 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-osx-aarch_64.jar
+#8 155.2 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-osx-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-osx-x86_64.jar
+#8 157.0 REPLACED /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.7.Final-windows-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-codec-native-quic-4.2.21.Final-windows-x86_64.jar
+#8 158.2 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.21.Final-osx-aarch_64.jar
+#8 159.5 REPLACED /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.7.Final-osx-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-resolver-dns-native-macos-4.2.21.Final-osx-x86_64.jar
+#8 160.8 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.21.Final-linux-aarch_64.jar
+#8 161.3 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.7.Final-linux-riscv64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.21.Final-linux-riscv64.jar
+#8 163.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.7.Final-linux-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-epoll-4.2.21.Final-linux-x86_64.jar
+#8 165.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.7.Final-linux-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.21.Final-linux-aarch_64.jar
+#8 166.3 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.7.Final-linux-riscv64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.21.Final-linux-riscv64.jar
+#8 170.6 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.7.Final-linux-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-io_uring-4.2.21.Final-linux-x86_64.jar
+#8 171.1 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.7.Final-osx-aarch_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.21.Final-osx-aarch_64.jar
+#8 172.4 REPLACED /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.7.Final-osx-x86_64.jar -> /usr/lib/livy/rsc-jars/netty-transport-native-kqueue-4.2.21.Final-osx-x86_64.jar
+#8 172.8 REPLACED /usr/lib/hadoop/lib/netty-all-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-all-4.1.141.Final.jar
+#8 175.1 REPLACED /usr/lib/hadoop/lib/netty-buffer-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-buffer-4.1.141.Final.jar
+#8 177.7 REPLACED /usr/lib/hadoop/lib/netty-codec-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-4.1.141.Final.jar
+#8 179.8 REPLACED /usr/lib/hadoop/lib/netty-codec-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-dns-4.1.141.Final.jar
+#8 181.6 REPLACED /usr/lib/hadoop/lib/netty-codec-haproxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-haproxy-4.1.141.Final.jar
+#8 182.0 REPLACED /usr/lib/hadoop/lib/netty-codec-http-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http-4.1.141.Final.jar
+#8 183.7 REPLACED /usr/lib/hadoop/lib/netty-codec-http2-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http2-4.1.141.Final.jar
+#8 184.8 REPLACED /usr/lib/hadoop/lib/netty-codec-memcache-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-memcache-4.1.141.Final.jar
+#8 185.1 REPLACED /usr/lib/hadoop/lib/netty-codec-mqtt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-mqtt-4.1.141.Final.jar
+#8 185.5 REPLACED /usr/lib/hadoop/lib/netty-codec-redis-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-redis-4.1.141.Final.jar
+#8 186.6 REPLACED /usr/lib/hadoop/lib/netty-codec-smtp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-smtp-4.1.141.Final.jar
+#8 187.6 REPLACED /usr/lib/hadoop/lib/netty-codec-socks-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-socks-4.1.141.Final.jar
+#8 188.5 REPLACED /usr/lib/hadoop/lib/netty-codec-stomp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-stomp-4.1.141.Final.jar
+#8 197.2 REPLACED /usr/lib/hadoop/lib/netty-codec-xml-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-xml-4.1.141.Final.jar
+#8 198.3 REPLACED /usr/lib/hadoop/lib/netty-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-common-4.1.141.Final.jar
+#8 199.0 REPLACED /usr/lib/hadoop/lib/netty-handler-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-4.1.141.Final.jar
+#8 199.6 REPLACED /usr/lib/hadoop/lib/netty-handler-proxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-proxy-4.1.141.Final.jar
+#8 203.8 REPLACED /usr/lib/hadoop/lib/netty-handler-ssl-ocsp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-ssl-ocsp-4.1.141.Final.jar
+#8 206.4 REPLACED /usr/lib/hadoop/lib/netty-resolver-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-4.1.141.Final.jar
+#8 206.9 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-4.1.141.Final.jar
+#8 207.8 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-classes-macos-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-classes-macos-4.1.141.Final.jar
+#8 208.6 REPLACED /usr/lib/hadoop/lib/netty-transport-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-4.1.141.Final.jar
+#8 208.9 REPLACED /usr/lib/hadoop/lib/netty-transport-classes-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-epoll-4.1.141.Final.jar
+#8 210.8 REPLACED /usr/lib/hadoop/lib/netty-transport-classes-kqueue-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-kqueue-4.1.141.Final.jar
+#8 213.8 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final.jar
+#8 216.5 REPLACED /usr/lib/hadoop/lib/netty-transport-native-unix-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-unix-common-4.1.141.Final.jar
+#8 217.4 REPLACED /usr/lib/hadoop/lib/netty-transport-rxtx-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-rxtx-4.1.141.Final.jar
+#8 217.7 REPLACED /usr/lib/hadoop/lib/netty-transport-sctp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-sctp-4.1.141.Final.jar
+#8 219.6 REPLACED /usr/lib/hadoop/lib/netty-transport-udt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-udt-4.1.141.Final.jar
+#8 221.5 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-aarch_64.jar
+#8 226.4 curl: (35) TLS connect error: error:0A000126:SSL routines::unexpected eof while reading
+#8 228.6 REPLACED /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-x86_64.jar
+#8 229.2 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final-linux-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-aarch_64.jar
+#8 233.0 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final-linux-riscv64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-riscv64.jar
+#8 234.0 REPLACED /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.135.Final-linux-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-x86_64.jar
+#8 236.4 REPLACED /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-aarch_64.jar
+#8 238.8 REPLACED /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-x86_64.jar
+#8 238.8 SYMLINK /usr/lib/hadoop/client/netty-all-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-all-4.1.141.Final.jar
+#8 238.8 SYMLINK /usr/lib/hadoop/client/netty-buffer-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-buffer-4.1.141.Final.jar
+#8 238.8 SYMLINK /usr/lib/hadoop/client/netty-codec-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-dns-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-haproxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-haproxy-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-http-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-http2-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-http2-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-memcache-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-memcache-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-mqtt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-mqtt-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-redis-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-redis-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-smtp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-smtp-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-socks-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-socks-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-stomp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-stomp-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-codec-xml-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-codec-xml-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-common-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-handler-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-4.1.141.Final.jar
+#8 238.9 SYMLINK /usr/lib/hadoop/client/netty-handler-proxy-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-proxy-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-handler-ssl-ocsp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-handler-ssl-ocsp-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-resolver-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-classes-macos-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-classes-macos-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-classes-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-epoll-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-classes-kqueue-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-classes-kqueue-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-native-unix-common-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-native-unix-common-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-rxtx-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-rxtx-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-sctp-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-sctp-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-transport-udt-4.1.135.Final.jar -> /usr/lib/hadoop/lib/netty-transport-udt-4.1.141.Final.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-native-macos-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-aarch_64.jar
+#8 239.0 SYMLINK /usr/lib/hadoop/client/netty-resolver-dns-native-macos-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-resolver-dns-native-macos-4.1.141.Final-osx-x86_64.jar
+#8 239.1 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final-linux-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-aarch_64.jar
+#8 239.1 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final-linux-riscv64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-riscv64.jar
+#8 239.1 SYMLINK /usr/lib/hadoop/client/netty-transport-native-epoll-4.1.135.Final-linux-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-epoll-4.1.141.Final-linux-x86_64.jar
+#8 239.1 SYMLINK /usr/lib/hadoop/client/netty-transport-native-kqueue-4.1.135.Final-osx-aarch_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-aarch_64.jar
+#8 239.1 SYMLINK /usr/lib/hadoop/client/netty-transport-native-kqueue-4.1.135.Final-osx-x86_64.jar -> /usr/lib/hadoop/lib/netty-transport-native-kqueue-4.1.141.Final-osx-x86_64.jar
+#8 239.9 REPLACED /usr/lib/hadoop/lib/bcprov-jdk18on-1.78.1.jar -> /usr/lib/hadoop/lib/bcprov-jdk18on-1.85.2.jar
+#8 241.8 REPLACED /usr/lib/livy/rsc-jars/bcprov-jdk18on-1.80.jar -> /usr/lib/livy/rsc-jars/bcprov-jdk18on-1.85.2.jar
+#8 242.9 REPLACED /usr/lib/spark/jars/jackson-core-2.21.2.jar -> /usr/lib/spark/jars/jackson-core-2.21.9.jar
+#8 244.4 REPLACED /usr/lib/spark/jars/jackson-databind-2.21.2.jar -> /usr/lib/spark/jars/jackson-databind-2.21.9.jar
+#8 246.1 REPLACED /usr/lib/spark/jars/jackson-dataformat-yaml-2.21.2.jar -> /usr/lib/spark/jars/jackson-dataformat-yaml-2.21.9.jar
+#8 251.7 REPLACED /usr/lib/spark/jars/jackson-datatype-jsr310-2.21.2.jar -> /usr/lib/spark/jars/jackson-datatype-jsr310-2.21.9.jar
+#8 253.9 REPLACED /usr/lib/spark/jars/jackson-module-scala_2.13-2.21.2.jar -> /usr/lib/spark/jars/jackson-module-scala_2.13-2.21.9.jar
+#8 255.4 REPLACED /usr/lib/spark/jars/guava-33.4.8-jre.jar -> /usr/lib/spark/jars/guava-33.8.0-jre.jar
+#8 263.9 REPLACED /usr/lib/spark/jars/lz4-java-1.11.0.jar -> /usr/lib/spark/jars/lz4-java-1.11.4.jar
+#8 265.7 REPLACED /usr/lib/spark/jars/snappy-java-1.1.10.8.jar -> /usr/lib/spark/jars/snappy-java-1.1.10.12.jar
+#8 266.2 REPLACED /usr/lib/hadoop/lib/snappy-java-1.1.10.4.jar -> /usr/lib/hadoop/lib/snappy-java-1.1.10.12.jar
+#8 266.2 SYMLINK /usr/lib/hadoop/client/snappy-java-1.1.10.4.jar -> /usr/lib/hadoop/lib/snappy-java-1.1.10.12.jar
+#8 269.9 REPLACED /usr/lib/spark/jars/zookeeper-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/spark/jars/zookeeper-3.9.7.jar
+#8 271.2 REPLACED /usr/lib/spark/jars/zookeeper-jute-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/spark/jars/zookeeper-jute-3.9.7.jar
+#8 272.2 REPLACED /usr/lib/hadoop/lib/zookeeper-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/hadoop/lib/zookeeper-3.9.7.jar
+#8 274.4 REPLACED /usr/lib/hadoop/lib/zookeeper-jute-3.9.3-amzn-8-amzn.20261030202207.jar -> /usr/lib/hadoop/lib/zookeeper-jute-3.9.7.jar
+#8 276.3 REPLACED /usr/lib/hadoop/lib/commons-lang3-3.17.0.jar -> /usr/lib/hadoop/lib/commons-lang3-3.19.0.jar
+#8 279.0 REPLACED /usr/lib/spark/jars/vertx-auth-common-4.5.25.jar -> /usr/lib/spark/jars/vertx-auth-common-4.5.36.jar
+#8 296.5 curl: (35) TLS connect error: error:0A000126:SSL routines::unexpected eof while reading
+#8 299.5 REPLACED /usr/lib/spark/jars/vertx-core-4.5.25.jar -> /usr/lib/spark/jars/vertx-core-4.5.36.jar
+#8 302.4 REPLACED /usr/lib/spark/jars/vertx-web-client-4.5.25.jar -> /usr/lib/spark/jars/vertx-web-client-4.5.36.jar
+#8 304.2 REPLACED /usr/lib/spark/jars/vertx-web-common-4.5.25.jar -> /usr/lib/spark/jars/vertx-web-common-4.5.36.jar
+#8 304.2 Jar replacements done: 179 entries
+#8 DONE 304.2s
+
+#9 [5/5] RUN python3.11 -m pip install --no-cache-dir --upgrade --ignore-installed "pip==26.3" "setuptools==84.2.1"  && python3.13 -m pip install --no-cache-dir --upgrade --ignore-installed "pip==26.3"  && rpm -e python3.11-pip python3.11-setuptools python3.13-pip  && python3.11 -m pip --version && python3.13 -m pip --version  && python3.11 -c "import setuptools; print('setuptools', setuptools.__version__)"
+#9 0.903 Collecting pip==26.3
+#9 1.025   Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+#9 1.211      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 10.8 MB/s eta 0:00:00
+#9 1.617 Collecting setuptools==84.2.1
+#9 1.654   Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
+#9 1.703      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 876.3/876.3 kB 18.4 MB/s eta 0:00:00
+#9 1.874 Installing collected packages: setuptools, pip
+#9 3.097 Successfully installed pip-26.3 setuptools-84.2.1
+#9 3.097 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.739 Collecting pip==26.3
+#9 3.895   Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+#9 3.947 Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+#9 4.198    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 15.0 MB/s eta 0:00:00
+#9 4.216 Installing collected packages: pip
+#9 5.071 Successfully installed pip-26.3
+#9 5.072 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 5.276 warning: file /usr/share/man/man1/pip3.11.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-wheel.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-uninstall.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-show.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-search.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-list.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-install.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-help.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-hash.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-freeze.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-download.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-debug.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-config.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-check.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip3.11-cache.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-wheel.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-uninstall.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-show.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-search.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-list.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-install.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-help.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-hash.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-freeze.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-download.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-debug.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-config.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-check.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/man/man1/pip-3.11-cache.1.gz: remove failed: No such file or directory
+#9 5.276 warning: file /usr/share/doc/python3.11-pip: remove failed: No such file or directory
+#9 5.346 warning: file /usr/share/doc/python3.11-setuptools: remove failed: No such file or directory
+#9 5.383 warning: file /usr/share/doc/python3.13-pip: remove failed: No such file or directory
+#9 5.649 pip 26.3 from /usr/local/lib/python3.11/site-packages/pip (python 3.11)
+#9 5.772 pip 26.3 from /usr/local/lib/python3.13/site-packages/pip (python 3.13)
+#9 5.902 setuptools 84.2.1
+#9 DONE 6.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 writing image sha256:0a034b3e53b57dd559662843ea546d48b0ab6a59362eaf6703512ac8653be169 done
+#10 naming to docker.io/library/emr-spark-8.2.0-patched:latest done
+#10 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/3aiwngfveha62aw0elk5gexhy
+
+Build multi-platform images faster with Docker Build Cloud: https://docs.docker.com/go/docker-build-cloud
